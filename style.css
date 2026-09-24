@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+  padding-bottom: 40px;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
+/* 标题 */
+.header {
+  text-align: center;
+  padding: 20px 0 16px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  margin-top: 4px;
+}
+
+/* 锻炼内容卡片 */
+.exercise-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.exercise-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.exercise-info {
+  flex: 1;
+}
+
+.exercise-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d3436;
+}
+
+.exercise-count {
+  font-size: 14px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* 倒计时卡片 */
+.countdown-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.countdown-label {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.countdown-time {
+  font-size: 36px;
+  font-weight: 800;
+  color: #4CAF50;
+  letter-spacing: 2px;
+}
+
+.countdown-remaining {
+  font-size: 15px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.countdown-sub {
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 6px;
+}
+
+/* 进度条 */
+.progress-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.progress-header span:last-child {
+  color: #4CAF50;
+  font-weight: 700;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #66bb6a);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+/* 计划列表 */
+.schedule-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.schedule-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.schedule-time {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.schedule-time-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.schedule-period {
+  font-size: 12px;
+  color: #aaa;
+  padding: 2px 8px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.schedule-status {
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.status-done {
+  background: #e8f5e9;
+  color: #4CAF50;
+}
+
+.status-pending {
+  background: #fff3e0;
+  color: #ff9800;
+}
+
+.status-upcoming {
+  background: #f5f5f5;
+  color: #999;
+}
+
+.status-expired {
+  background: #fafafa;
+  color: #ccc;
+}
+
+/* 开启推送按钮 */
+.enable-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  box-shadow: 0 4px 12px rgba(76,175,80,0.3);
+}
+
+.enable-btn:disabled {
+  background: #ccc;
+  box-shadow: none;
+}
+
+.enable-btn:active {
+  opacity: 0.85;
+}
+
+/* 推送状态提示 */
+.push-status {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+}
+
+/* 弹窗 */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 24px 24px;
+  max-width: 340px;
+  width: 90%;
+  text-align: center;
+  animation: slideUp 0.3s;
+}
+
+.modal-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.modal-content {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.modal-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-btn-cancel {
+  background: #f5f5f5;
+  color: #888;
+}
+
+.modal-btn-confirm {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: #fff;
+}
+
+.modal-btn:active {
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 完成动画 */
+.complete-emoji {
+  font-size: 56px;
+  animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}

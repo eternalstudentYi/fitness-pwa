@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#4CAF50">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="深蹲提醒">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.jpg">
+  <link rel="icon" href="icon-192.jpg">
+  <link rel="stylesheet" href="style.css">
+  <title>深蹲提醒助手</title>
+</head>
+<body>
+  <div class="container">
+    <!-- 标题 -->
+    <header class="header">
+      <h1>深蹲提醒助手</h1>
+      <p class="subtitle">每天 5 次，每次 20 个深蹲</p>
+    </header>
+
+    <!-- 锻炼内容卡片 -->
+    <div class="exercise-card">
+      <div class="exercise-icon"> squat</div>
+      <div class="exercise-info">
+        <div class="exercise-name">深蹲</div>
+        <div class="exercise-count">20 个/次</div>
+      </div>
+    </div>
+
+    <!-- 倒计时卡片 -->
+    <div class="countdown-card">
+      <div class="countdown-label">下次提醒</div>
+      <div class="countdown-time" id="nextTime">--:--</div>
+      <div class="countdown-remaining" id="countdown">加载中...</div>
+      <div class="countdown-sub" id="nextReminderInfo"></div>
+    </div>
+
+    <!-- 完成进度 -->
+    <div class="progress-card">
+      <div class="progress-header">
+        <span>今日完成</span>
+        <span id="progressText">0/5</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <!-- 今日计划列表 -->
+    <div class="schedule-card">
+      <div class="schedule-title">今日提醒计划</div>
+      <div class="schedule-list" id="scheduleList"></div>
+    </div>
+
+    <!-- 开启推送按钮 -->
+    <button class="enable-btn" id="enablePushBtn" disabled>
+      正在检查推送支持...
+    </button>
+
+    <!-- 推送状态提示 -->
+    <div class="push-status" id="pushStatus"></div>
+
+    <!-- 完成弹窗 -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <div class="modal-icon">squat</div>
+        <div class="modal-title" id="modalTitle">锻炼时间到！</div>
+        <div class="modal-content" id="modalContent">该做深蹲了！站起来，做 20 个深蹲吧！</div>
+        <div class="modal-buttons">
+          <button class="modal-btn modal-btn-cancel" id="modalSnooze">稍后提醒</button>
+          <button class="modal-btn modal-btn-confirm" id="modalComplete">马上做</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

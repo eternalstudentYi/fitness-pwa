@@ -1,0 +1,24 @@
+{
+  "name": "深蹲提醒助手",
+  "short_name": "深蹲提醒",
+  "description": "每天5次提醒做深蹲，每次20个，未完成每5分钟再提醒，最多6次",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#667eea",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "icon-192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
