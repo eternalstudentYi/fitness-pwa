@@ -15,7 +15,7 @@ const CONFIG = {
   exerciseCount: 20,
   snoozeInterval: 5,    // 未完成则隔5分钟再提醒
   maxReminders: 6,       // 每个时段最多提醒6次
-  apiBase: ''             // 部署后改为 Cloudflare Worker 地址
+  apiBase: 'https://fitness-reminder.fitness-reminder-petermal.workers.dev'  // Cloudflare Worker 地址
 };
 
 // 后端 API 地址（部署后修改）
